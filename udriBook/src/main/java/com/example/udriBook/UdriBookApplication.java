@@ -11,7 +11,11 @@ import org.springframework.boot.autoconfigure.flyway.FlywayMigrationStrategy;
 public class UdriBookApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UdriBookApplication.class, args);
+		new org.springframework.boot.builder.SpringApplicationBuilder(UdriBookApplication.class)
+			// Flyway owns the schema. Hibernate must NEVER validate or update.
+			// This overrides any env var (e.g. DDL_AUTO=validate on Railway).
+			.properties("spring.jpa.hibernate.ddl-auto=none")
+			.run(args);
 	}
 
 	@Bean
