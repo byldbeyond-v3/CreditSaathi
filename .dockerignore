@@ -1,0 +1,16 @@
+target/
+udriBook/target/
+*.class
+*.jar
+*.war
+*.ear
+.settings/
+.classpath
+.project
+.idea/
+*.iml
+.DS_Store
+uploads/
+logs/
+.git/
+.gitignore

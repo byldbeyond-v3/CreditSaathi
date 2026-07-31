@@ -1,0 +1,7 @@
+.git
+.gitignore
+.vscode
+uploads
+*.md
+!README.md
+.DS_Store

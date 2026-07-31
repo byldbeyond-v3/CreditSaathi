@@ -1,0 +1,9 @@
+-- ⚠️ BASELINE SCHEMA PLACEHOLDER ⚠️
+-- Since 'spring.flyway.baseline-on-migrate=true' is configured, Flyway will assume the existing database 
+-- is already at Version 1 and will NOT execute this script on existing databases.
+-- 
+-- For completely fresh installations, you should export your current MySQL schema and paste it here.
+-- You can generate the schema using your IDE (e.g., IntelliJ's Persistence window) or by running:
+-- mysqldump -u root -p --no-data my_khata > V1__init_schema.sql
+-- 
+-- Future schema changes MUST be added as new files (e.g., V2__add_new_column.sql).

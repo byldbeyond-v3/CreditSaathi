@@ -1,0 +1,17 @@
+{
+    "phases": {
+        "setup": {
+            "nixPkgs": [
+                "jdk17"
+            ]
+        },
+        "build": {
+            "cmds": [
+                "bash build.sh"
+            ]
+        }
+    },
+    "start": {
+        "cmd": "bash start.sh"
+    }
+}

@@ -1,0 +1,8 @@
+[build]
+builder = "nixpacks"
+buildCommand = "chmod +x mvnw && ./mvnw clean package -DskipTests && cp udriBook/target/app.jar app.jar"
+
+[deploy]
+startCommand = "java -jar app.jar"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10
