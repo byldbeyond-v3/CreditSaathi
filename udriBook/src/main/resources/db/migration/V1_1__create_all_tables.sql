@@ -75,6 +75,7 @@ CREATE TABLE IF NOT EXISTS customer_transactions (
     transaction_date DATETIME NOT NULL,
     balance_after DECIMAL(19, 2) NOT NULL,
     transaction_id VARCHAR(30) UNIQUE NOT NULL,
+    file_path TEXT DEFAULT NULL,
     CONSTRAINT fk_transaction_customer FOREIGN KEY (customer_id) REFERENCES u_customers(id) ON DELETE CASCADE,
     INDEX idx_trans_customer (customer_id),
     INDEX idx_trans_date (transaction_date)
