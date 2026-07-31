@@ -1,5 +1,6 @@
 CREATE TABLE IF NOT EXISTS customer_dues (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    version BIGINT DEFAULT 0,
     customer_id BIGINT NOT NULL,
     due_amount DECIMAL(10, 2) NOT NULL,
     due_date DATE DEFAULT NULL,

@@ -1,0 +1,1 @@
+ALTER TABLE u_customers ADD COLUMN version BIGINT DEFAULT 0;

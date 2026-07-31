@@ -1,0 +1,1 @@
+ALTER TABLE customer_dues ADD COLUMN version BIGINT DEFAULT 0;
