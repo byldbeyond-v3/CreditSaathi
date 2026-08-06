@@ -1,12 +1,6 @@
 -- V6: Fix missing columns and tables detected by entity-vs-schema audit
 
--- 1. Add missing `version` column to `u_customers` (used by @Version for optimistic locking)
-ALTER TABLE u_customers
-    ADD COLUMN version BIGINT DEFAULT 0 NOT NULL;
 
--- 2. Add missing `version` column to `customer_dues` (used by @Version for optimistic locking)
-ALTER TABLE customer_dues
-    ADD COLUMN version BIGINT DEFAULT 0 NOT NULL;
 
 -- 3. Create missing `sales_transaction` table (mapped by SalesTransaction entity)
 CREATE TABLE IF NOT EXISTS sales_transaction (
